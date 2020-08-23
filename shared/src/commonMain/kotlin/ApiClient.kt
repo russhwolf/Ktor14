@@ -18,10 +18,10 @@ class ApiClient(engine: HttpClientEngine) {
         install(JsonFeature) {
             serializer = KotlinxSerializer()
         }
-        install(Logging) {
-            logger = Logger.SIMPLE
-            level = LogLevel.ALL
-        }
+//        install(Logging) {
+//            logger = Logger.SIMPLE
+//            level = LogLevel.ALL
+//        }
     }
 
     suspend fun getIp(): IpResponse = httpClient.get("https://api.ipify.org/?format=json")
